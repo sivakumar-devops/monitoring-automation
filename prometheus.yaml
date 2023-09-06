@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'node'
+    static_configs:
+      - targets: ['rocky-linux.boldbi.com:9100']
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['rocky-linux.boldbi.com:8080']
